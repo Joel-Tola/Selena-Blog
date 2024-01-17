@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'EastmanRoman';
+    src: url('Resources/EastmanRomanTrial-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "helvetica", arial, "times new roman";
+    /* font-family: 'EastmanRoman', sans-serif; */
+    max-width: 80rem;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: inline;
+    font-size: small;
+    font-weight: bold;
+}
+
+nav ul span {
+    margin: 0 2rem;
+    font-size: medium;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 0.5rem;
+}
+
+.nav-bar {
+    margin: 2rem 0;
+}
+
+.nav-bar ul {
+    margin: 0;
+}
+
+nav ul li a {
+    color: firebrick;
+}
+
+nav ul li a:hover {
+    font-size: initial;
+    transition: font-size 0.3s;
+}
+
+.video {
+    width: 100%;
+}
+
+.title {
+    font-family: 'EastmanRoman', sans-serif;
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+.sub-title {
+    font-size: x-large;
+    margin-bottom: 2rem;
+    color: gray;
+}
+
+.container {
+    padding: 3rem;
+}
+
+.full-width {
+    width: 99vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+.wrapper {
+    display: grid;
+}
+
+.grid-template-columns-33-33-33 {
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+.grid-template-columns-50-50 {
+    grid-template-columns: 50% 50%;
+}
+
+.grid-template-columns-100 {
+    grid-template-columns: 100%;
+}
+
+.btn {
+    border: 0.1rem solid deepskyblue;
+    padding: 0.3rem 0.5rem;
+    color: deepskyblue;
+    border-radius: 0.3rem;
+    font-size: smaller;
+    margin-top: 3rem;
+}
+
+.btn:hover {
+    background-color: deepskyblue;
+    color: white;
+}
+
+.btn-container {
+    margin-top: 3rem;
+}
+
+.img-1 {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+.img-2 {
+    width: 70%;
+}
+
+.img-3 {
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.img-4 {
+    width: 70%;
+    margin-top: 2rem;
+}
+
+.highlight {
+    background-color: whitesmoke;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.tile {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.tile img {
+    width: 100%;
+}
+
+.circle {
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circle img{
+    height: 100% !important;
+    width: auto !important;
+}
+
+.tile-text {
+    padding: 2rem;
+    text-align: justify;
+}
+
+#MediaGallery .text-container {
+    margin-right: 5rem;
+}
+
+#MentalHealthPresence .text-container {
+    margin: 0 5rem;
+}
+
+#Achievements .tile {
+    width: 70%;
+    margin: 0;
+    background-color: white;
+}
+
+#Achievements .tile img {
+    width: 100%;
+}
+
+#Bio-RareBeauty .tile {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+footer a {
+    color: black;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 40% 10% 10% 10%;
+    margin-bottom: 2rem;
+    font-size: smaller;
+}
+
+.copyright-label {
+    font-size: x-small;
+    color: gray;
+    margin: 3rem 0 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-gap: 1rem;
+        align-items: center;
+    }
+
+    .grid-template-columns-50-50 {
+        grid-template-columns: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    .nav-bar {
+        text-align: center;
+    }
+
+    nav {
+        font-size: small !important;
+    }
+
+    nav ul span {
+        font-size: medium !important;
+    }
+
+    .text-align-right {
+        text-align: center;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+
+    .tile {
+        margin-right: 0;
+    }
+
+    #MediaGallery .text-container {
+        text-align: center;
+        margin: 0;
+    }
+
+    #MentalHealthPresence .text-container {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 2rem;
+        font-size: smaller;
+        text-align: center;
+    }
+
+    footer ul {
+        margin: 0;
+    }
+
+    footer ul li {
+        margin: 1rem;
+    }
+
+    footer a {
+        font-size: small;
+    }
+
+    .empty {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        font-size: x-small;
+    }
+
+    nav ul span {
+        font-size: small;
+    }
+}
