@@ -12,6 +12,10 @@ body {
     margin: auto;
 }
 
+p {
+    color: #666;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0rem;
@@ -62,6 +66,11 @@ nav ul li a:hover {
     font-family: 'EastmanRoman', sans-serif;
     font-size: xx-large;
     margin-bottom: 2rem;
+    color: #333;
+}
+
+.title p {
+    color: #333;
 }
 
 .sub-title {
@@ -157,8 +166,13 @@ nav ul li a:hover {
     text-align: right;
 }
 
+.text-align-justify {
+    text-align: justify;
+}
+
 .font-weight-bold {
     font-weight: bold;
+    color: #333;
 }
 
 .margin-auto {
@@ -203,10 +217,13 @@ nav ul li a:hover {
     width: 70%;
     margin: 0;
     background-color: white;
+    text-align: center;
 }
 
 #Achievements .tile img {
     width: 100%;
+    max-height: 10rem;
+    max-width: max-content;
 }
 
 #Bio-RareBeauty .tile {
