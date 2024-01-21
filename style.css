@@ -205,11 +205,7 @@ nav ul li a:hover {
     text-align: justify;
 }
 
-#MediaGallery .text-container {
-    margin-right: 5rem;
-}
-
-#MentalHealthPresence .text-container {
+.text-container {
     margin: 0 5rem;
 }
 
@@ -229,6 +225,10 @@ nav ul li a:hover {
 #Bio-RareBeauty .tile {
     margin-bottom: 0;
     margin-right: 0;
+}
+
+#Acting-Career li {
+    margin: 2rem 0;
 }
 
 footer a {
@@ -291,12 +291,7 @@ footer a {
         margin-right: 0;
     }
 
-    #MediaGallery .text-container {
-        text-align: center;
-        margin: 0;
-    }
-
-    #MentalHealthPresence .text-container {
+    .text-container {
         text-align: center;
         margin: 0;
     }
