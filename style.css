@@ -396,7 +396,7 @@ footer a {
 
 /* Add arrows to the right container (pointing left) */
 #time-line .right::before {
-    content: " ";highlight
+    content: " ";
     height: 0;
     position: absolute;
     top: 1.375rem;
