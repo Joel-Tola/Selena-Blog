@@ -329,14 +329,12 @@ footer a {
     margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 #time-line .timeline {
     position: relative;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 #time-line .timeline::after {
     content: '';
     position: absolute;
@@ -348,7 +346,6 @@ footer a {
     margin-left: -0.188rem;
 }
 
-/* Container around content */
 #time-line .container {
     padding: 0.625rem 2.5rem;
     position: relative;
@@ -356,7 +353,6 @@ footer a {
     width: 50%;
 }
 
-/* The circles on the timeline */
 #time-line .container::after {
     content: '';
     position: absolute;
@@ -370,17 +366,14 @@ footer a {
     z-index: 1;
 }
 
-/* Place the container to the left */
 #time-line .left {
     left: -5rem;
 }
 
-/* Place the container to the right */
 #time-line .right {
     left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 #time-line .left::before {
     content: " ";
     height: 0;
@@ -394,7 +387,6 @@ footer a {
     border-color: transparent transparent transparent whitesmoke;
 }
 
-/* Add arrows to the right container (pointing left) */
 #time-line .right::before {
     content: " ";
     height: 0;
@@ -408,12 +400,10 @@ footer a {
     border-color: transparent whitesmoke transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 #time-line .right::after {
     left: -1rem;
 }
 
-/* The actual content */
 #time-line .content {
     padding: 1.25rem 1.875rem;
     background-color: whitesmoke;
@@ -421,22 +411,18 @@ footer a {
     border-radius: 0.375rem;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
 
-    /* Place the timelime to the left */
     #time-line .timeline::after {
         left: 1.938rem;
     }
 
-    /* Full-width containers */
     #time-line .container {
         width: 100%;
         padding-left: 4.375rem;
         padding-right: 1.563rem;
     }
 
-    /* Make sure that all arrows are pointing leftwards */
     #time-line .container::before {
         left: 60px;
         border: medium solid whitesmoke;
@@ -444,13 +430,11 @@ footer a {
         border-color: transparent whitesmoke transparent transparent;
     }
 
-    /* Make sure all circles are at the same spot */
     #time-line .left::after,
     #time-line .right::after {
         left: 0.938rem;
     }
 
-    /* Make all right containers behave like the left ones */
     #time-line .right {
         left: 0%;
     }
@@ -463,5 +447,180 @@ footer a {
 
     nav ul span {
         font-size: small;
+    }
+}
+
+/* Slider */
+.slider-container {
+    width: 100%;
+    height: 40rem;
+    /* overflow: hidden; */
+    position: relative;
+    /* since slides are absolute */
+    box-shadow: 0 2px 10px black;
+
+    animation: 0.4s 0.2s both fadeIn;
+}
+
+.slide {
+    /* positioning all slides normal position to full size of slider and in view */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    animation: 12s linear infinite sliderAnimation;
+
+    border: 20px solid #1d1e22;
+    /* thought it looked good */
+    box-sizing: border-box;
+    /* to keep total width at 100% */
+
+    box-shadow: inset 0 0 20px black;
+    /* inset shadow on the slides */
+
+    display: flex;
+    /* to position the text inside*/
+}
+
+.slide:first-of-type {
+    /* City */
+    background: no-repeat 50% 20%/cover url('./Resources/MediaGallery/pic-1.jpg');
+    /* positioning for the text inside */
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.slide:nth-of-type(2) {
+    /* Nature Bridge */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-2.webp');
+
+    /* 12s - 9s = 3s... Will start after 3s */
+    animation-delay: -9s;
+}
+
+.slide:nth-of-type(3) {
+    /* Painting */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-3.jpg');
+    /* Will start after 6s */
+    animation-delay: -6s;
+
+    /* positioning for the text inside */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slide:nth-of-type(4) {
+    /* Painting */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-4.webp');
+    /* Will start after 6s */
+    animation-delay: -6s;
+
+    /* positioning for the text inside */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slide:nth-of-type(5) {
+    /* Painting */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-5.webp');
+    /* Will start after 6s */
+    animation-delay: -6s;
+
+    /* positioning for the text inside */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slide:nth-of-type(6) {
+    /* Painting */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-6.webp');
+    /* Will start after 6s */
+    animation-delay: -6s;
+
+    /* positioning for the text inside */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.slide:last-of-type {
+    /* Coffee */
+    background: no-repeat 50% 10%/cover url('./Resources/MediaGallery/pic-15.webp');
+    /* Will start after 9s */
+    animation-delay: -3s;
+
+    /* positioning for the text inside */
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes sliderAnimation {
+
+    /* 4 slides, 20% in place and 5% transition time = 100% */
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    /* starts in view */
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    /* stays in view */
+    25% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    /* slides out left */
+    70% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    /* Doesn't matter at what percent: changes to transparent so can't see it travel back across to the right. */
+    71% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    /* Doesn't matter at what percent: moves off right */
+    95% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+
+    /* Becomes transparent and Ready to slide on from the right */
+}
+
+.slide p {
+    /*style for the text*/
+    margin: 5vw;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0.1vw 0.1vw black;
+    font-family: Arial Black, Georgia, Garamond, Palatino, Trebuchet MS, Verdana;
+}
+
+.slide:last-of-type p {
+    /* because white text on white background */
+    text-shadow: 0 0 15px black;
+}
+
+.link {
+    text-align: center;
+    padding: 100px;
+}
+
+.link a {
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 }
