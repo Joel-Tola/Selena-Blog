@@ -127,6 +127,10 @@ nav ul li a:hover {
     margin-top: 3rem;
 }
 
+.img {
+    width: 100%;
+}
+
 .img-1 {
     width: 100%;
     filter: brightness(0.7);
